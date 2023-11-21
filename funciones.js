@@ -239,6 +239,7 @@ function compararImg() {
 
     //comprobar los aciertos esten completados
     if(nivel == 1 && aciertos == 6){
+        tablero.innerHTML = "";
         nivel ++
         mostrarNivel.textContent = nivel;
         intentos = 0;
@@ -248,10 +249,21 @@ function compararImg() {
         clearInterval(tiempoTranscurrido);
         tiempo = 50;
         mostrarTiempo.textContent = tiempo;
+        alert("ganaste")
 
-        if(nivel == 2 && aciertos==8){
-            alert("ganaste")
-        }
+        
+    }else if(nivel == 2 && aciertos==8){
+        tablero.innerHTML = "";
+    nivel ++
+    mostrarNivel.textContent = nivel;
+    intentos = 0;
+    mostrarIntentos.textContent = intentos;
+    aciertos = 0;
+    mostrarAciertos.textContent = aciertos;
+    clearInterval(tiempoTranscurrido);
+    tiempo = 40;
+    mostrarTiempo.textContent = tiempo;
+    alert("ganaste")
     }
 }
 
