@@ -233,8 +233,10 @@ let nivelSonido = new Audio("./sonidos/level up.mp3");
 let perderSonido = new Audio("./sonidos/perdio.mp3");
 let MostrarJugador = document.querySelector(".Jugador");
 let tabla = document.querySelector(".table tbody");
+let fondo = document.querySelector("body");
 
 document.addEventListener("DOMContentLoaded", ()=>{
+    fondo.classList.add("fondo1")
     mostrarDatos()
 })
 
