@@ -202,12 +202,21 @@ let imgNivel3 = [{
 
 tablero = document.querySelector(".tablero")
 
+
+
 let imagenNombre = [];
 let imagenId = [];
 let aciertos = 0;
+let totalIntentos = 0;
+let totalTiempo = 0;
+let tiempoSobrante= 0;
 let intentos = 0;
-let tiempo = 20;
+let tiempo = 60;
 let nivel = 1;
+
+
+
+
 
 let mostrarIntentos = document.querySelector(".Intentos");
 let mostrarAciertos = document.querySelector(".aciertos");
@@ -222,35 +231,41 @@ let adivinarSonido = new Audio("./sonidos/adivinar.mp3");
 let falloSonido = new Audio("./sonidos/fallo.mp3");
 let nivelSonido = new Audio("./sonidos/level up.mp3");
 let perderSonido = new Audio("./sonidos/perdio.mp3");
+let MostrarJugador = document.querySelector(".Jugador");
+let tabla = document.querySelector(".table tbody");
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    mostrarDatos()
+})
 
 
-//agregar el evento para iniciar el juego
 
-btn_iniciar.addEventListener("click", function(){
+btn_iniciar.addEventListener("click", function () {
     //comprobar que el juego este activo
-    if(estoyJugando == false && nivel==1){
-        estoyJugando = true;
-        nivel1();
-        
-        
-    }else if(estoyJugando == false && nivel==2){
+    if (estoyJugando == false && nivel == 1) {
+        ventanaModal()
+
+
+
+    } else if (estoyJugando == false && nivel == 2) {
         estoyJugando = true;
         nivel2();
-    }else if(estoyJugando == false && nivel==3){
+    } else if (estoyJugando == false && nivel == 3) {
         estoyJugando = true;
         nivel3();
     }
 
-    
+
 
 })
+
 
 
 
 //setInterval()  esta se ejecuta en determinado tiempo infinitamente
 //clearInterval() funciona para parar setInterval()
 
- 
+
 
 
 
@@ -259,18 +274,18 @@ btn_iniciar.addEventListener("click", function(){
 //funcion para agregar imagenes al tablero
 function agregarImagen() {
     //agregar imagenes dependiendo del nivel
-    if(nivel == 1){
+    if (nivel == 1) {
         imagenNivel = imgNivel1
-    }else if(nivel == 2){
+    } else if (nivel == 2) {
         imagenNivel = imgNivel2
-    }else if(nivel == 3){
+    } else if (nivel == 3) {
         imagenNivel = imgNivel3
     }
 
 
     //colocar imagenes aleatorias
 
-    imagenNivel.sort(()=> Math.random() -0.5);
+    imagenNivel.sort(() => Math.random() - 0.5);
 
 
     imagenNivel.forEach((imagen, i) => {
@@ -308,7 +323,7 @@ function compararImg() {
     if (imagenNombre[0] == imagenNombre[1]) {
         if (imagenId[0] != imagenId[1]) {
             adivinarSonido.play();
-            
+
             imagenesTablero[imagenId[0]].src = "img/gano.png"
             imagenesTablero[imagenId[1]].src = "img/gano.png"
             imagenesTablero[imagenId[0]].removeEventListener("click", mostrarImg)
@@ -327,7 +342,7 @@ function compararImg() {
 
     } else {
         falloSonido.play();
-        
+
         imagenesTablero[imagenId[0]].src = "img/panda.jpg"
         imagenesTablero[imagenId[1]].src = "img/panda.jpg"
         intentos++
@@ -338,10 +353,14 @@ function compararImg() {
     imagenId = [];
 
     //comprobar los aciertos esten completados
-    if(nivel == 1 && aciertos == 6){
+    if (nivel == 1 && aciertos == 6) {
+        totalIntentos += intentos;
+        totalTiempo += tiempo;
+        tiempoSobrante += (60 - tiempo);
+        obtenerDAtos();
         nivelSonido.play();
         tablero.innerHTML = "";
-        nivel ++
+        nivel++
         mostrarNivel.textContent = nivel;
         intentos = 0;
         mostrarIntentos.textContent = intentos;
@@ -353,23 +372,23 @@ function compararImg() {
         alert("ganaste")
         estoyJugando = false;
 
-        
-    }else if(nivel == 2 && aciertos==8){
-        nivelSonido.play();
 
+    } else if (nivel == 2 && aciertos == 8) {
+        
+        nivelSonido.play();
         tablero.innerHTML = "";
-    nivel ++
-    mostrarNivel.textContent = nivel;
-    intentos = 0;
-    mostrarIntentos.textContent = intentos;
-    aciertos = 0;
-    mostrarAciertos.textContent = aciertos;
-    clearInterval(tiempoTranscurrido);
-    tiempo = 40;
-    mostrarTiempo.textContent = tiempo;
-    alert("ganaste")
-    estoyJugando = false;
-    }else if(nivel == 3 && aciertos==10){
+        nivel++
+        mostrarNivel.textContent = nivel;
+        intentos = 0;
+        mostrarIntentos.textContent = intentos;
+        aciertos = 0;
+        mostrarAciertos.textContent = aciertos;
+        clearInterval(tiempoTranscurrido);
+        tiempo = 40;
+        mostrarTiempo.textContent = tiempo;
+        alert("ganaste")
+        estoyJugando = false;
+    } else if (nivel == 3 && aciertos == 10) {
         nivelSonido.play();
         alert("GANASTE EL JUEGO");
         location.reload();
@@ -378,7 +397,7 @@ function compararImg() {
 
 
 
-function nivel1(){
+function nivel1() {
     //agregar las imagenes al tablero
     agregarImagen();
     mostrarNivel.textContent = nivel;
@@ -387,43 +406,78 @@ function nivel1(){
     tiempoJuego();
 }
 
-function nivel2(){
+function nivel2() {
     //agregar las imagenes al tablero
     agregarImagen();
-    
+
 
     //llamar el tiempo
     tiempoJuego();
 }
 
-function nivel3(){
+function nivel3() {
     //agregar las imagenes al tablero
     agregarImagen();
-    
+
 
     //llamar el tiempo
     tiempoJuego();
 }
 
 
-function tiempoJuego(){
-    tiempoTranscurrido = setInterval(()=>{
+function tiempoJuego() {
+    tiempoTranscurrido = setInterval(() => {
         tiempo--;
         mostrarTiempo.textContent = tiempo
-        if(tiempo == 10){
+        if (tiempo == 10) {
             mostrarTiempo.classList.add("fast")
 
-        }else if(tiempo == 0){
+        } else if (tiempo == 0) {
             perderSonido.play();
 
             alert("Perdiste. FIN DEL TIEMPO")
-            
+
             clearInterval(tiempoTranscurrido);
             location.reload();
         }
     }, 1000);
 
-    
+
 }
 
+
+//mostrar ventana modal
+function ventanaModal() {
+    let modal = document.querySelector("#exampleModal")
+    let cerrarModal = document.querySelectorAll(".cerrar")
+    let player = document.querySelector(".nombre-jugador")
+    let btnJugador = document.querySelector(".registro-jugador")
+
+    //botones para cerrar la ventana modal
+    cerrarModal.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            modal.classList.remove("show")
+            modal.style.display = "none";
+
+        })
+    })
+
+    //mostrar ventana modal 
+    modal.classList.add("show");
+    modal.style.display = "block";
+
+    //evento click al boton azul del modal
+    btnJugador.addEventListener("click", () => {
+        //mostrar el nombre en el tablero
+        MostrarJugador.textContent = player.value;
+
+        //cerrar el modal
+        modal.classList.remove("show")
+        modal.style.display = "none";
+
+        //iniciar juego con el nombre
+        estoyJugando = true;
+        nivel1();
+    })
+}
 
