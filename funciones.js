@@ -1,47 +1,47 @@
 //variables golbales
 let imgNivel1 = [{
-    nombre: "all might",
-    url: "img/all.jpeg"
+    nombre: "maki",
+    url: "img/maki.jpg"
 },
 {
     nombre: "panda",
-    url: "img/rem.jpg"
+    url: "img/panda.jpg"
 },
 {
-    nombre: "makima",
-    url: "img/makima.webp"
+    nombre: "geto",
+    url: "img/getof.webp"
 },
 {
     nombre: "gojo",
     url: "img/gojo.jpg_large"
 },
 {
-    nombre: "reze",
-    url: "img/reze1.jpg"
+    nombre: "mei",
+    url: "img/mei.webp"
 },
 {
     nombre: "sukuna",
     url: "img/sukuna.jpg"
 },
 {
-    nombre: "all might",
-    url: "img/all.jpeg"
+    nombre: "maki",
+    url: "img/maki.jpg"
 },
 {
     nombre: "panda",
-    url: "img/rem.jpg"
+    url: "img/panda.jpg"
 },
 {
-    nombre: "makima",
-    url: "img/makima.webp"
+    nombre: "geto",
+    url: "img/getof.webp"
 },
 {
     nombre: "gojo",
     url: "img/gojo.jpg_large"
 },
 {
-    nombre: "reze",
-    url: "img/reze1.jpg"
+    nombre: "mei",
+    url: "img/mei.webp"
 },
 {
     nombre: "sukuna",
@@ -51,152 +51,152 @@ let imgNivel1 = [{
 
 //variables golbales
 let imgNivel2 = [{
-    nombre: "all might",
-    url: "img/all.jpeg"
+    nombre: "maki",
+    url: "img/maki.jpg"
 },
 {
     nombre: "panda",
-    url: "img/rem.jpg"
+    url: "img/panda.jpg"
 },
 
 {
-    nombre: "makima",
-    url: "img/makima.webp"
+    nombre: "geto",
+    url: "img/getof.webp"
 },
 {
     nombre: "gojo",
     url: "img/gojo.jpg_large"
 },
 {
-    nombre: "reze",
-    url: "img/reze1.jpg"
+    nombre: "mei",
+    url: "img/mei.webp"
 },
 {
     nombre: "sukuna",
     url: "img/sukuna.jpg"
 },
 {
-    nombre: "all might",
-    url: "img/all.jpeg"
+    nombre: "maki",
+    url: "img/maki.jpg"
 },
 {
     nombre: "panda",
-    url: "img/rem.jpg"
+    url: "img/panda.jpg"
 },
 {
-    nombre: "makima",
-    url: "img/makima.webp"
+    nombre: "geto",
+    url: "img/getof.webp"
 },
 {
     nombre: "gojo",
     url: "img/gojo.jpg_large"
 },
 {
-    nombre: "reze",
-    url: "img/reze1.jpg"
+    nombre: "mei",
+    url: "img/mei.webp"
 },
 {
     nombre: "sukuna",
     url: "img/sukuna.jpg"
 },
 {
-    nombre: "gohan",
-    url: "img/gohan.jpg"
+    nombre: "toji",
+    url: "img/toji.jpg"
 },
 {
-    nombre: "baki",
-    url: "img/baki.jpeg"
+    nombre: "nobara",
+    url: "img/nobara.webp"
 },
 {
-    nombre: "gohan",
-    url: "img/gohan.jpg"
+    nombre: "toji",
+    url: "img/toji.jpg"
 },
 {
-    nombre: "baki",
-    url: "img/baki.jpeg"
+    nombre: "nobara",
+    url: "img/nobara.webp"
 }
 ]
 
 let imgNivel3 = [{
-    nombre: "all might",
-    url: "img/all.jpeg"
+    nombre: "maki",
+    url: "img/maki.jpg"
 },
 {
     nombre: "panda",
-    url: "img/rem.jpg"
+    url: "img/panda.jpg"
 },
 
 {
-    nombre: "makima",
-    url: "img/makima.webp"
+    nombre: "geto",
+    url: "img/getof.webp"
 },
 {
     nombre: "gojo",
     url: "img/gojo.jpg_large"
 },
 {
-    nombre: "reze",
-    url: "img/reze1.jpg"
+    nombre: "mei",
+    url: "img/mei.webp"
 },
 {
     nombre: "sukuna",
     url: "img/sukuna.jpg"
 },
 {
-    nombre: "all might",
-    url: "img/all.jpeg"
+    nombre: "maki",
+    url: "img/maki.jpg"
 },
 {
     nombre: "panda",
-    url: "img/rem.jpg"
+    url: "img/panda.jpg"
 },
 {
-    nombre: "makima",
-    url: "img/makima.webp"
+    nombre: "geto",
+    url: "img/getof.webp"
 },
 {
     nombre: "gojo",
     url: "img/gojo.jpg_large"
 },
 {
-    nombre: "reze",
-    url: "img/reze1.jpg"
+    nombre: "mei",
+    url: "img/mei.webp"
 },
 {
     nombre: "sukuna",
     url: "img/sukuna.jpg"
 },
 {
-    nombre: "gohan",
-    url: "img/gohan.jpg"
+    nombre: "toji",
+    url: "img/toji.jpg"
 },
 {
-    nombre: "baki",
-    url: "img/baki.jpeg"
+    nombre: "nobara",
+    url: "img/nobara.webp"
 },
 {
-    nombre: "gohan",
-    url: "img/gohan.jpg"
+    nombre: "toji",
+    url: "img/toji.jpg"
 },
 {
-    nombre: "baki",
-    url: "img/baki.jpeg"
+    nombre: "nobara",
+    url: "img/nobara.webp"
 },
 {
-    nombre: "jack",
-    url: "img/jack.webp"
+    nombre: "todo",
+    url: "img/todo.jpg"
 },
 {
-    nombre: "zeus",
-    url: "img/zeus.jpg"
+    nombre: "mahoraga",
+    url: "img/maho.jpg"
 },
 {
-    nombre: "jack",
-    url: "img/jack.webp"
+    nombre: "todo",
+    url: "img/todo.jpg"
 },
 {
-    nombre: "zeus",
-    url: "img/zeus.jpg"
+    nombre: "mahoraga",
+    url: "img/maho.jpg"
 }
 ]
 
@@ -296,7 +296,7 @@ function agregarImagen() {
         let img = document.createElement("img") //crear la etiqueta img
         img.className = "img-fluid alto-img my-2" //agregamos clase img-fluid a la etiqueta img
         img.id = i; //enumeracion de imagenes
-        img.src = "img/panda.jpg"; //agregar la ubicacion url a la imagen
+        img.src = "img/ini.webp"; //agregar la ubicacion url a la imagen
         img.addEventListener("click", mostrarImg); //agregar evento click a la imagen
         div.appendChild(img); //agregar etiqueta img al div
         tablero.appendChild(div); // agregar los div al tablero
@@ -326,8 +326,8 @@ function compararImg() {
         if (imagenId[0] != imagenId[1]) {
             adivinarSonido.play();
 
-            imagenesTablero[imagenId[0]].src = "img/gano.png"
-            imagenesTablero[imagenId[1]].src = "img/gano.png"
+            imagenesTablero[imagenId[0]].src = "img/geto.jpg"
+            imagenesTablero[imagenId[1]].src = "img/geto.jpg"
             imagenesTablero[imagenId[0]].removeEventListener("click", mostrarImg)
             imagenesTablero[imagenId[1]].removeEventListener("click", mostrarImg)
             aciertos++
@@ -336,7 +336,7 @@ function compararImg() {
             mostrarIntentos.textContent = intentos;
         } else {
             alert("debes escoger otra imagen")
-            imagenesTablero[imagenId[0]].src = "img/panda.jpg"
+            imagenesTablero[imagenId[0]].src = "img/ini.webp"
             intentos++
             mostrarIntentos.textContent = intentos;
         }
@@ -345,8 +345,8 @@ function compararImg() {
     } else {
         falloSonido.play();
 
-        imagenesTablero[imagenId[0]].src = "img/panda.jpg"
-        imagenesTablero[imagenId[1]].src = "img/panda.jpg"
+        imagenesTablero[imagenId[0]].src = "img/ini.webp"
+        imagenesTablero[imagenId[1]].src = "img/ini.webp"
         intentos++
         mostrarIntentos.textContent = intentos;
     }
